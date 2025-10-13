@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товары - Портфолио</title>
+    <title>Дневник - Портфолио</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-
 icons@1.11.1/font/bootstrap-icons.css">
@@ -36,27 +36,22 @@ icons@1.11.1/font/bootstrap-icons.css">
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="/index.html">
+                            <a class="nav-link" href="/index.html">
                                 <i class="bi bi-house me-1"></i>Главная
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="news.html">
-                                <i class="bi bi-newspaper me-1"></i>Новости
+                            <a class="nav-link" href="practices.html">
+                                <i class="bi bi-code-slash me-1"></i>Проекты
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/practices.html">
-                                <i class="bi bi-code-slash me-1"></i>Практики
+                            <a class="nav-link active" href="goods.html">
+                                <i class="bi bi-bookmark-check me-1"></i>Дневник
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/goods.html">
-                                <i class="bi bi-cart me-1"></i>Товары
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contacts.html">
+                            <a class="nav-link" href="contacts.html">
                                 <i class="bi bi-telephone me-1"></i>Контакты
                             </a>
                         </li>
@@ -64,59 +59,33 @@ icons@1.11.1/font/bootstrap-icons.css">
                 </div>
             </div>
         </nav>
-        <!-- Projects Section -->
+        <main class="container my-4">
             <section class="mb-5">
                 <div class="card shadow-sm">
                     <div class="card-header bg-light">
                         <h3 class="card-title h5 mb-0">
-                            <i class="bi bi-cart-fill text-primary"></i>
-                            Товары
+                            <i class="bi bi-folder-fill text-primary"></i>
+                            Мой учебный процесс
                         </h3>
                     </div>
                     <div class="card-body">
                         <div class="row g-3">
                             <div class="col-md-4">
                                 <div class="card h-100">
-                                    <img src="/images/good1.jpeg" class="card-img-top" alt="Товар 1" style="height: 150px; object-fit: cover;">
                                     <div class="card-body">
-                                        <h5 class="card-title">Товар 1</h5>
-                                        <p class="card-text small text-muted">
-                                        Описание товара 1.
+                                        <h5 class="card-title"></h5>
+                                        <p class="card-text medium">
+                                            15 дек - Верстка макета сайта ✓ 
                                         </p>
-                                        <div class="mb-2">
-                                            <span class="badge bg-success">Цена 1</span>
-                                            <button class="badge bg-primary">В корзину</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card h-100">
-                                    <img src="/images/good2.jpeg" class="card-img-top" alt="Товар 2" style="height: 150px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Слякоть</h5>
-                                        <p class="card-text small text-muted">
-                                            Автоматически подарит вам новогоднее настроение.
+                                        <p class="card-text medium">
+                                            10 дек - JavaScript основы ✓
                                         </p>
-                                        <div class="mb-2">
-                                            <span class="badge bg-success">Бесценно</span>
-                                            <button class="badge bg-primary">В корзину</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card h-100">
-                                    <img src="/images/good3.jpeg" class="card-img-top" alt="Товар 3" style="height: 150px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Товар 3</h5>
-                                        <p class="card-text small text-muted">
-                                            Описание товара 3.
+                                        <p class="card-text medium">
+                                            05 дек - Работа с формами in progress
                                         </p>
-                                        <div class="mb-2">
-                                            <span class="badge bg-success">Цена 3</span>
-                                            <button class="badge bg-primary">В корзину</button>
-                                        </div>
+                                        <p class="card-text medium">
+                                            01 дек - Адаптивный дизайн in progress 
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -124,12 +93,60 @@ icons@1.11.1/font/bootstrap-icons.css">
                     </div>
                 </div>
             </section>
-        <!-- Footer -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-alt text-primary"></i>
+                            Текущие курсы
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Веб-разработка</span>
+                                        <span class="text-primary">90%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-primary" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>JavaScript</span>
+                                        <span class="text-primary">70%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-success" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>React</span>
+                                        <span class="text-primary">50%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-info" style="width: 50%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <section class="mb-5">
+                <button type="button" class=" btn btn-primary col-md-2">Добавить запись</button>
+            </section>
+        </main>
+           <!-- Footer -->
         <footer class="bg-dark text-white py-4 mt-5">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="mb-0">&copy; 2025 Портфолио студента. Все права
+                        <p class="mb-0">&copy; 2024 Портфолио студента. Все права
                             защищены.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
