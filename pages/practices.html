@@ -4,159 +4,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Проекты - Портфолио</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-
-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Проекты - StudentDev Portfolio</title>
+    <link rel="stylesheet" href="/style/styles.css">
 </head>
 
-<body class="bg-light">
-    <div class="container-fluid p-0">
+<body>
+    <div class="page">
         <!-- Header -->
-        <header class="bg-primary text-white py-4">
+        <header class="header">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h1 class="h3 mb-1">Мой Портфолио</h1>
-                        <p class="mb-0 opacity-75">Студент разработчик</p>
-                    </div>
-                    <div class="col-auto">
-                        <span class="badge bg-light text-primary">ЭФБО-16-
-                            24</span>
-                    </div>
+                <div class="header__content">
+                    <h1 class="header__title">Сергей Шевалдышев</h1>
+                    <p class="header__subtitle">Студент-разработчик</p>
                 </div>
             </div>
         </header>
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="nav">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-bs- toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/index.html">
-                                <i class="bi bi-house me-1"></i>Главная
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="practices.html">
-                                <i class="bi bi-code-slash me-1"></i>Проекты
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="goods.html">
-                                <i class="bi bi-bookmark-check me-1"></i>Дневник
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacts.html">
-                                <i class="bi bi-telephone me-1"></i>Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/index.html" class="nav__link">Главная</a>
+                    </li>
+                    <li class="nav__item nav__item--active">
+                        <a href="practices.html" class="nav__link">Проекты</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="goods.html" class="nav__link">Дневник</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contacts.html" class="nav__link">Контакты</a>
+                    </li>
+                </ul>
             </div>
         </nav>
-    <!-- Projects Section -->
-            <section class="mb-5">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-light">
-                        <h3 class="card-title h5 mb-0">
-                            <i class="bi bi-folder-fill text-primary"></i>
-                            Мои проекты
-                        </h3>
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <section class="projects-preview">
+                    <h3 class="section-title">
+                        Мои проекты
+                    </h3>
+                    <div class="projects-preview__grid">
+                        <article class="project-card" onclick="Project1.showModal()">
+                            <div class="project-card__image">
+                                <img src="/images/good1.jpeg" alt="Личный сайт">
+                            </div>
+                            <div class="project-card__content">
+                                <h5 class="project-card__title">Личный сайт</h5>
+                                <p class="project-card__description">
+                                    Сайт-портфолио на HTML, CSS и
+                                    Bootstrap с адаптивным дизайном.
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">Bootstrap</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="project-card" onclick="Project2.showModal()">
+                            <div class="project-card__image">
+                                <img src="/images/good2.jpeg" alt="Todo приложение">
+                            </div>
+                            <div class="project-card__content">
+                                <h5 class="project-card__title">Todo
+                                    приложение</h5>
+                                <p class="project-card__description">
+                                    Приложение для управления задачами с
+                                    использованием JavaScript.
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">LocalStorage</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="project-card" onclick="Project3.showModal()">
+                            <div class="project-card__image">
+                                <img src="/images/good3.jpeg" alt="Интернет-магазин">
+                            </div>
+                            <div class="project-card__content">
+                                <h5 class="project-card__title">Интернет-
+                                    магазин</h5>
+                                <p class="project-card__description">
+                                    Прототип интернет-магазина с корзиной
+                                    товаров и фильтрацией.
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">API</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="project-card" onclick="Project4.showModal()">
+                            <div class="project-card__image">
+                                <img src="/images/good1.jpeg" alt="Портфолио">
+                            </div>
+                            <div class="project-card__content">
+                                <h5 class="project-card__title">Портфолио</h5>
+                                <p class="project-card__description">
+                                    Личный сайт-портфолио.
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">Bootstrap</span>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                    <div class="card-body">
-                        <div>
-                            <button class="col-md-4 border-0 col-3 text-center mx-auto" onclick="Project1.showModal()">
-                                <div class="card h-100">
-                                    <img src="/images/good1.jpeg" class="card-img-top" alt="Личный сайт" style="height: 150px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Личный сайт</h5>
-                                        <p class="card-text small text-muted">
-                                            Сайт-портфолио на HTML, CSS и
-                                            Bootstrap с адаптивным дизайном.
-                                        </p>
-                                        <div class="mb-2">
-                                            <span class="badge bg-primary">HTML</span>
-                                            <span class="badge bg-primary">CSS</span>
-                                            <span class="badge bg-primary">Bootstrap</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                            <button class="col-md-4 border-0 col-3 text-center mx-auto" onclick="Project2.showModal()">
-                                <div class="card h-100">
-                                    <img src="/images/good2.jpeg" class="card-img-top" alt="Todo приложение" style="height: 150px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Todo
-                                            приложение</h5>
-                                        <p class="card-text small text-muted">
-                                            Приложение для управления задачами с
-                                            использованием JavaScript.
-                                        </p>
-                                        <div class="mb-2">
-                                            <span class="badge bg-success">JavaScript</span>
-                                            <span class="badge bg-success">LocalStorage</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                            <button class="col-md-4 border-0 col-3 text-center mx-auto" onclick="Project3.showModal()">
-                                <div class="card h-100">
-                                    <img src="/images/good3.jpeg" class="card-img-top" alt="Интернет-магазин" style="height: 150px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Интернет-
-                                            магазин</h5>
-                                        <p class="card-text small text-muted">
-                                            Прототип интернет-магазина с корзиной
-                                            товаров и фильтрацией.
-                                        </p>
-                                        <div class="mb-2">
-                                            <span class="badge bg-info">React</span>
-                                            <span class="badge bg-info">API</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                            <button class="col-md-4 border-0 col-3 text-center mx-auto" onclick="Project4.showModal()">
-                                <div class="card h-100">
-                                    <img src="/images/good1.jpeg" class="card-img-top" alt="Портфолио" style="height: 150px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Портфолио</h5>
-                                        <p class="card-text small text-muted">
-                                            ПЛичный сайт-портфолио.
-                                        </p>
-                                        <div class="mb-2">
-                                            <span class="badge bg-warning">HTML</span>
-                                            <span class="badge bg-warning">Bootstrap</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </main>
         <dialog id="Project1">
             <div class="modal-header">
                 <h2>Личный сайт</h2>
             </div>
             <div class="modal-content">
-               <h5>
-                Полное описание проекта
-               </h5>
-               <p>Бла бла бла</p>
-               <h5>
-                Скриншоты проекта:
-               </h5>
-               <img src="/images/photo.jpeg" alt="screenshot">
-               <a href="https://github.com/seregakriwoy/7-8-fbr_test">
-                Ссылка на проект
-               </a>
+                <h5>
+                    Полное описание проекта
+                </h5>
+                <p>Бла бла бла</p>
+                <h5>
+                    Скриншоты проекта:
+                </h5>
+                <img src="/images/photo.jpeg" alt="screenshot">
+                <a href="https://github.com/seregakriwoy/7-8-fbr_test">
+                    Ссылка на проект
+                </a>
             </div>
         </dialog>
         <dialog id="Project2">
@@ -164,17 +139,17 @@ icons@1.11.1/font/bootstrap-icons.css">
                 <h2>Todo приложение</h2>
             </div>
             <div class="modal-content">
-               <h5>
-                Полное описание проекта
-               </h5>
-               <p>Бла бла бла</p>
-               <h5>
-                Скриншоты проекта:
-               </h5>
-               <img src="/images/photo.jpeg" alt="screenshot">
-               <a href="https://github.com/seregakriwoy/7-8-fbr_test">
-                Ссылка на проект
-               </a>
+                <h5>
+                    Полное описание проекта
+                </h5>
+                <p>Бла бла бла</p>
+                <h5>
+                    Скриншоты проекта:
+                </h5>
+                <img src="/images/photo.jpeg" alt="screenshot">
+                <a href="https://github.com/seregakriwoy/7-8-fbr_test">
+                    Ссылка на проект
+                </a>
             </div>
         </dialog>
         <dialog id="Project3">
@@ -182,17 +157,17 @@ icons@1.11.1/font/bootstrap-icons.css">
                 <h2>Интернет магазин</h2>
             </div>
             <div class="modal-content">
-               <h5>
-                Полное описание проекта
-               </h5>
-               <p>Бла бла бла</p>
-               <h5>
-                Скриншоты проекта:
-               </h5>
-               <img src="/images/photo.jpeg" alt="screenshot">
-               <a href="https://github.com/seregakriwoy/7-8-fbr_test">
-                Ссылка на проект
-               </a>
+                <h5>
+                    Полное описание проекта
+                </h5>
+                <p>Бла бла бла</p>
+                <h5>
+                    Скриншоты проекта:
+                </h5>
+                <img src="/images/photo.jpeg" alt="screenshot">
+                <a href="https://github.com/seregakriwoy/7-8-fbr_test">
+                    Ссылка на проект
+                </a>
             </div>
         </dialog>
         <dialog id="Project4">
@@ -200,17 +175,17 @@ icons@1.11.1/font/bootstrap-icons.css">
                 <h2>Портфолио</h2>
             </div>
             <div class="modal-content">
-               <h5>
-                Полное описание проекта
-               </h5>
-               <p>Бла бла бла</p>
-               <h5>
-                Скриншоты проекта:
-               </h5>
-               <img src="/images/photo.jpeg" alt="screenshot">
-               <a href="https://github.com/seregakriwoy/7-8-fbr_test">
-                Ссылка на проект
-               </a>
+                <h5>
+                    Полное описание проекта
+                </h5>
+                <p>Бла бла бла</p>
+                <h5>
+                    Скриншоты проекта:
+                </h5>
+                <img src="/images/photo.jpeg" alt="screenshot">
+                <a href="https://github.com/seregakriwoy/7-8-fbr_test">
+                    Ссылка на проект
+                </a>
             </div>
         </dialog>
         <script>
@@ -244,23 +219,23 @@ icons@1.11.1/font/bootstrap-icons.css">
                     }
                 });
         </script>
-           <!-- Footer -->
-        <footer class="bg-dark text-white py-4 mt-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p class="mb-0">&copy; 2024 Портфолио студента. Все права
-                            защищены.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="pages/contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
-                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
-                    </div>
+        <!-- Footer -->
+    </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__copyright">&copy; 2025 StudentDev
+                    Portfolio</p>
+                <div class="footer__links">
+                    <a href="mailto:student@edu.ru" class="footer__link">student@edu.ru</a>
+                    <a href="https://github.com" class="footer__link">GitHub</a>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
