@@ -656,7 +656,10 @@ body {
 .form__button {
     font-size: 1.1rem;
     padding: var(--space-md) var(--space-lg);
+    background: var(--primary-dark);
+    color: var(--bg-body);
 }
+
 
 .contact-info {
     background: var(--bg-card);
