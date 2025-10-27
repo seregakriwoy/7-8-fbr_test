@@ -4,23 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - StudentDev Portfolio</title>
+    <title>Адаптивные изображения - Демо</title>
     <link rel="stylesheet" href="style/styles.css">
 </head>
 
 <body>
-    <div class="page">
-        <!-- Header -->
+    <div class="container">
         <header class="header">
-            <div class="container">
-                <div class="header__content">
-                    <h1 class="header__title">Сергей Шевалдышев</h1>
-                    <p class="header__subtitle">Студент-разработчик</p>
-                </div>
-            </div>
+            <h1 class="header__title">Адаптивные изображения</h1>
+            <p class="header__subtitle">Демонстрация современных техник</p>
         </header>
-        <!-- Navigation -->
-        <nav class="nav">
+         <nav class="nav">
             <div class="container">
                 <ul class="nav__list">
                     <li class="nav__item nav__item--active">
@@ -38,138 +32,158 @@
                 </ul>
             </div>
         </nav>
-        <!-- Main Content -->
         <main class="main">
-            <div class="container">
-                <!-- Hero Section -->
-                <section class="hero">
-                    <div class="hero__content">
-                        <div class="hero__image">
-                            <img src="images/photo.jpeg" alt="Фото студента" class="hero__photo">
-                        </div>
-                        <div class="hero__info">
-                            <h2 class="hero__greeting">Привет! Я студент</h2>
-                            <p class="hero__description">
-                                Факультет перспективных технологий и индустриального пограммирования, группа ЭФБО-16-24<br>
-                                Увлекаюсь веб-разработкой и созданием современных
-                                интерфейсов
-                            </p>
-                            <button class="button button--primary hero__button">
-                                Скачать резюме
-                            </button>
-                        </div>
+            <!-- Секция 1: Простое адаптивное изображение -->
+            <section class="section">
+                <h2 class="section__title">1. Базовое адаптивное изображение</h2>
+                <div class="image-container">
+                    <img src="images/landscape.jpeg" alt="Красивый пейзаж с горами и озером" class="responsive-image">
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Изображение занимает 100% ширины контейнера</li>
+                        <li>Высота автоматически рассчитывается для сохранения
+                            пропорций</li>
+                        <li>Работает на всех устройствах</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Секция 2: Picture element с разными версиями -->
+            <section class="section">
+                <h2 class="section__title">2. Picture element с форматами</h2>
+                <div class="image-container">
+                    <picture>
+                        <!-- WebP для современных браузеров -->
+                        <source srcset="images/photo.webp" type="image/webp">
+                        <!-- JPEG для старых браузеров -->
+                        <source srcset="images/photo.jpeg" type="image/jpeg">
+                        <!-- Фолбэк -->
+                        <img src="images/photo.jpeg" alt="Портрет человека"
+                            class="responsive-image">
+                    </picture>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Браузер выбирает лучший формат (WebP или JPEG)</li>
+                        <li>Автоматическое переключение между форматами</li>
+                        <li>Фолбэк для старых браузеров</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Секция 3: Разные изображения для разных размеров экрана -->
+            <section class="section">
+                <h2 class="section__title">3. Разные изображения для разных
+                    экранов</h2>
+                <div class="image-container">
+                    <picture>
+                        <!-- Большое изображение для десктопов -->
+                        <source media="(min-width: 1200px)" srcset="images/wide-desktop.jpg">
+                        <!-- Среднее для планшетов -->
+                        <source media="(min-width: 768px)" srcset="images/tablet.jpg">
+                        <!-- Маленькое для мобильных -->
+                        <img src="images/mobile.jpg" alt="Адаптивное изображение для разных устройств"
+                            class="responsive-image">
+                    </picture>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Десктопы: wide-desktop.jpg (1200px+)</li>
+                        <li>Планшеты: tablet.jpg (768px-1199px)</li>
+                        <li>Мобильные: mobile.jpg (до 767px)</li>
+                        <li>Браузер сам выбирает подходящее изображение</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Секция 4: Retina display поддержка -->
+            <section class="section">
+                <h2 class="section__title">4. Поддержка Retina дисплеев</h2>
+                <div class="image-container">
+                    <img src="images/icon@1x.png" srcset="images/icon@1x.png 1x, images/icon@2x.png 2x"
+                        alt="Иконка с поддержкой Retina" class="retina-image">
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Обычные экраны: icon@1x.png</li>
+                        <li>Retina экраны: icon@2x.png (в 2 раза четче)</li>
+                        <li>Автоматическое определение плотности пикселей</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Секция 5: Object-fit демонстрация -->
+            <section class="section">
+                <h2 class="section__title">5. Object-fit свойства</h2>
+                <div class="object-fit-demo">
+                    <div class="object-fit-item">
+                        <img src="images/square.jpg" alt="Cover пример" class="object-fit-cover">
+                        <span>object-fit: cover</span>
                     </div>
-                </section>
-                <!-- Skills Section -->
-                <section class="skills">
-                    <h2 class="section-title">Мои навыки</h2>
-                    <div class="skills__grid">
-                        <div class="skill">
-                            <div class="skill__header">
-                                <span class="skill__name">HTML/CSS</span>
-                                <span class="skill__percent">90%</span>
-                            </div>
-                            <div class="skill__progress">
-                                <div class="skill__progress-bar" style="width:90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill__header">
-                                <span class="skill__name">JavaScript</span>
-                                <span class="skill__percent">80%</span>
-                            </div>
-                            <div class="skill__progress">
-                                <div class="skill__progress-bar" style="width:80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill__header">
-                                <span class="skill__name">Bootstrap</span>
-                                <span class="skill__percent">85%</span>
-                            </div>
-                            <div class="skill__progress">
-                                <div class="skill__progress-bar" style="width:85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill__header">
-                                <span class="skill__name">React</span>
-                                <span class="skill__percent">60%</span>
-                            </div>
-                            <div class="skill__progress">
-                                <div class="skill__progress-bar" style="width:60%"></div>
-                            </div>
-                        </div>
+                    <div class="object-fit-item">
+                        <img src="images/square.jpg" alt="Contain пример" class="object-fit-contain">
+                        <span>object-fit: contain</span>
                     </div>
-                </section>
-                <!-- Projects Preview -->
-                <section class="projects-preview">
-                    <h2 class="section-title">Лучшие проекты</h2>
-                    <div class="projects-preview__grid">
-                        <article class="project-card">
-                            <div class="project-card__image">
-                                <img src="images/good1.jpeg" alt="Личный сайт">
-                            </div>
-                            <div class="project-card__content">
-                                <h3 class="project-card__title">Личный сайт</h3>
-                                <p class="project-card__description">
-                                    Адаптивный сайт-портфолио на HTML и CSS
-                                </p>
-                                <div class="project-card__tags">
-                                    <span class="tag">HTML</span>
-                                    <span class="tag">CSS</span>
-                                    <span class="tag">JavaScript</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="project-card">
-                            <div class="project-card__image">
-                                <img src="images/good2.jpeg" alt="Todo приложение">
-                            </div>
-                            <div class="project-card__content">
-                                <h3 class="project-card__title">Todo
-                                    приложение</h3>
-                                <p class="project-card__description">
-                                    Приложение для управления задачами
-                                </p>
-                                <div class="project-card__tags">
-                                    <span class="tag">JavaScript</span>
-                                    <span class="tag">LocalStorage</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="project-card">
-                            <div class="project-card__image">
-                                <img src="images/good3.jpeg" alt="Интернет-магазин">
-                            </div>
-                            <div class="project-card__content">
-                                <h3 class="project-card__title">Интернет-
-                                    магазин</h3>
-                                <p class="project-card__description">
-                                    Прототип магазина с корзиной товаров
-                                </p>
-                                <div class="project-card__tags">
-                                    <span class="tag">React</span>
-                                    <span class="tag">API</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-            </div>
-        </main>
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__content">
-                    <p class="footer__copyright">&copy; 2025 StudentDev
-                        Portfolio</p>
-                    <div class="footer__links">
-                        <a href="mailto:student@edu.ru" class="footer__link">student@edu.ru</a>
-                        <a href="https://github.com" class="footer__link">GitHub</a>
+                    <div class="object-fit-item">
+                        <img src="images/square.jpg" alt="Fill пример" class="object-fit-fill">
+                        <span>object-fit: fill</span>
                     </div>
                 </div>
-            </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li><strong>cover</strong> - заполняет контейнер, обрезая
+                            края</li>
+                        <li><strong>contain</strong> - вписывает полностью, могут
+                            быть поля</li>
+                        <li><strong>fill</strong> - растягивает, искажая
+                            пропорции</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Секция 6: Адаптивная галерея без обрезки -->
+            <section class="section">
+                <h2 class="section__title">6. Адаптивная галерея (без обрезки)
+                </h2>
+                <div class="gallery">
+                    <div class="gallery__item">
+                        <div class="gallery__image-container">
+                            <img src="images/gallery1.jpg" alt="Галерея 1 - Горный пейзаж" class="gallery__image">
+                        </div>
+                    </div>
+                    <div class="gallery__item">
+                        <div class="gallery__image-container">
+                            <img src="images/gallery2.jpg" alt="Галерея 2 - Городской вид" class="gallery__image">
+                        </div>
+                    </div>
+                    <div class="gallery__item">
+                        <div class="gallery__image-container">
+                            <img src="images/gallery3.jpg" alt="Галерея 3 - Природа" class="gallery__image">
+                        </div>
+                    </div>
+                    <div class="gallery__item">
+                        <div class="gallery__image-container">
+                            <img src="images/gallery4.jpg" alt="Галерея 4 - Архитектура" class="gallery__image">
+                        </div>
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li><strong>На десктопах:</strong> 4 изображения в ряд,
+                            пропорциональное масштабирование</li>
+                        <li><strong>На мобильных:</strong> 1 изображение в ряд,
+                            полная видимость</li>
+                        <li><strong>Особенности:</strong> Никакой обрезки, плавное
+                            масштабирование, сохранение пропорций</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>Измените размер окна браузера чтобы увидеть адаптивность в
+                действии!</p>
         </footer>
     </div>
 </body>
